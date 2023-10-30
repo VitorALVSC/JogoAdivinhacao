@@ -72,6 +72,7 @@ Iniciar.addEventListener('click', () => {
         `<p>A Dificuldade escolhida foi: <strong>${Dificuldade.value}</strong></p>`
         QuantTentativas.innerHTML = 
         `Você tem <strong> ${DificuldadeTentativas}</strong> tentativas!`
+        console.log(NumSorteado)
     }
 })
 
