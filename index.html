@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/Logo.jpg" sizes="16x16" type="image/png">
+    <title>Jogo de adivinhação</title>
+</head>
+
+<body>
+    <div class="grid-geral">
+        <div>
+            <h1 class="titulo">Lucky Guess</h1>
+        </div>
+        <div class="container">
+            <div class="resumo">
+                <p class="info-geral">O objetivo do jogo é conseguir adivinhar o número que o jogo sorteou
+                    automaticamente.</p>
+                <p class="info-geral">O próprio usuário tem a posibilidade de escolher o número máximo para sortear e
+                    também a dificuldade que deseja.</p>
+            </div>
+            <div class="alert alert-danger modal-alerta" role="alert"></div>
+            <div>
+                <div class="escolhas">
+                    <label>Informe até que número deseja que seja sorteado:</label>
+                    <input id="sortear" class="form-control" type="number" placeholder="Sortear até:">
+                </div>
+                <div class="escolhas">
+                    <label>Informe a dificuldade que deseja para o jogo. </label>
+                    <div>
+                        <p class="info-tentativas">1 - Fácil: Realiza 10 tentativas.</p>
+                        <p class="info-tentativas">2 - Médio: Realiza 5 tentativas.</p>
+                        <p class="info-tentativas">3 - Difícil: Realiza 3 tentativas.</p>
+                    </div>
+                    <input id="dificuldade" class="form-control" type="number" placeholder="Dificuldade:">
+                </div>
+                <div class="botao-iniciar">
+                    <button id="iniciar" class="btn btn-outline-info">Iniciar jogada</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-palpite">
+            <div>
+                <div class="alert alert-info" role="alert">
+                    <div id="numEscolhido"></div>
+                    <div id="difEscolhida"></div>
+                    <div id="quantTentativas"></div>
+                </div>
+                <hr>
+                <div>
+                    <div>
+                        <label for="palpite">Palpite:</label>
+                        <input id="palpite" class="form-control" type="number" placeholder="Palpite">
+                    </div>
+                    <div class="botoes">
+                        <button id="enviar" class="btn btn-outline-info">Enviar</button>
+                    </div>
+                </div>
+                <div class="alert alert-danger modal-alerta-dois" role="alert"></div>
+                <hr>
+                <div class="botoes">
+                    <button id="abandonar" class="btn btn-outline-info">Abandonar jogada</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-resultado-vitoria">
+            <div>
+                <h1 class="titulo-resultado">Parabens!! Você acertou.</h1>
+                <div class="gif">
+                    <div>
+                        <img src="img/gif/0003.gif" alt="">
+                        <img src="img/gif/0006.gif" alt="">
+                    </div>
+                </div>
+                <div class="num-sorteado alert alert-info" role="alert">
+                    <p>O número sorteado foi: <strong><span class="num-sorteado-modal-vitoria"></span></strong></p>
+                </div>
+                <div class="botoes botao-reiniciar">
+                    <button id="jogarNovamente" class="btn btn-outline-info">Jogar novamente</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-resultado-derrota">
+            <div>
+                <h1 class="titulo-resultado">Acabaram suas tentativas.</h1>
+                <div class="gif">
+                    <div>
+                        <img src="img/gif/0014.gif" alt="">
+                        <img src="img/gif/0007.gif" alt="">
+                    </div>
+                </div>
+                <div class="num-sorteado alert alert-danger" role="alert">
+                    <p>O número sorteado foi: <strong><span class="num-sorteado-modal-derrota"></span></strong></p>
+                </div>
+                <div class="botoes botao-reiniciar">
+                    <button id="tentarNovamente" class="btn btn-outline-info">Tentar novamente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

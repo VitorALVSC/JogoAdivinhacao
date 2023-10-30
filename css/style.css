@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Sedgwick+Ave+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgba(47, 170, 170, 0.1);
+}
+
+.grid-geral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titulo {
+  margin: 20px;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(8, 80, 114);
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.container {
+  width: 95%;
+  height: auto;
+  border-radius: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 30px rgba(20, 71, 94, 0.781);
+  margin-bottom: 20px;
+}
+
+.resumo {
+  margin: 10px;
+  font-size: 15px;
+  width: 60%;
+  height: auto;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0px 0px 15px rgba(20, 70, 94, 0.384);
+  padding: 10px;
+}
+
+.info-geral {
+  color: rgb(150, 17, 17);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+.modal-alerta {
+  display: none;
+}
+
+.escolhas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  font-size: 15px;
+  color: rgb(8, 80, 114);
+  font-weight: bold;
+  text-align: center;
+}
+
+.info-tentativas {
+  font-family: 'Comfortaa';
+}
+
+.botao-iniciar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-palpite {
+  margin-top: 100px;
+  width: 40%;
+  height: auto;
+  display: none;
+  position: absolute;
+  z-index: 888;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 20px;
+  flex-direction: column;
+  box-shadow: 5px 5px 30px rgba(20, 71, 94, 0.781);
+}
+
+.botoes {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-alerta-dois {
+  display: none;
+}
+
+.modal-resultado-vitoria {
+  margin-top: 100px;
+  width: 50%;
+  height: auto;
+  display: none;
+  position: absolute;
+  z-index: 1888;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 20px;
+  flex-direction: column;
+  box-shadow: 5px 5px 30px rgba(20, 71, 94, 0.781);
+}
+
+.titulo-resultado {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  font-weight: bold;
+  color: rgb(8, 80, 114);
+  font-family: 'Sedgwick Ave Display', cursive;
+  text-align: center;
+}
+
+.gif {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.num-sorteado {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.botao-reiniciar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-resultado-derrota {
+  margin-top: 100px;
+  width: 50%;
+  height: auto;
+  display: none;
+  position: absolute;
+  z-index: 1888;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 20px;
+  flex-direction: column;
+  box-shadow: 5px 5px 30px rgba(20, 71, 94, 0.781);
+}
+
+@media screen and (max-width: 1280px) {
+
+  .modal-palpite {
+    width: 90%;
+    max-width: 550px;
+  }
+
+  .modal-resultado-vitoria {
+    width: 90%;
+    max-width: 650px;
+  }
+
+  .modal-resultado-derrota {
+    width: 90%;
+    max-width: 650px;
+  }
+
+}
+
+@media screen and (max-width: 430px) {
+
+  .titulo {
+    font-size: 50px;
+  }
+
+  .resumo {
+    width: 85%;
+  }
+
+  .modal-palpite {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .botoes {
+    width: 100%;
+  }
+
+  .modal-resultado-vitoria {
+    width: 90%;
+    margin-bottom: 100px;
+  }
+
+  .modal-resultado-derrota {
+    width: 90%;
+    margin-bottom: 100px;
+  }
+
+}
